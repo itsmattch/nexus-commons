@@ -1,0 +1,21 @@
+{
+    "name": "itsmattch/nexus-commons",
+    "description": "Nexus Commons is a collection of ready-to-use APIs",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Itsmattch\\NexusCommons\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mateusz Chmielewski",
+            "email": "hello@itsmattch.com",
+            "homepage":  "https://itsmattch.com/"
+        }
+    ],
+    "require": {
+        "php": "^8.1"
+    }
+}
