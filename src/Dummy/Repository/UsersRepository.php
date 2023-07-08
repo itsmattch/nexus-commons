@@ -2,22 +2,24 @@
 
 namespace Itsmattch\NexusCommons\Dummy\Repository;
 
+use Itsmattch\Nexus\Assembler\Builder\CollectionBuilder;
+use Itsmattch\Nexus\Assembler\Builder\ModelBuilder;
 use Itsmattch\Nexus\Assembler\Repository;
-use Itsmattch\Nexus\Contract\Assembler\Builder\CollectionBuilder;
-use Itsmattch\Nexus\Contract\Assembler\Builder\ModelBuilder;
-use Itsmattch\NexusCommons\Dummy\Model\Post;
+use Itsmattch\NexusCommons\Dummy\Model\User;
+use Itsmattch\NexusCommons\Dummy\Resource\UserCollection;
 
 class UsersRepository extends Repository
 {
-    protected string $model = Post::class;
+    protected string $model = User::class;
 
     protected string|array $resources = [
-        \Itsmattch\NexusCommons\Dummy\Resource\Post::class
+        'users' => UserCollection::class
     ];
+
 
     protected function collection(CollectionBuilder $builder): void
     {
-        //
+        $builder->root('users');
     }
 
     protected function model(ModelBuilder $builder): void
