@@ -1,6 +1,5 @@
 {
     "name": "itsmattch/nexus-commons",
-    "description": "Nexus Commons is a collection of ready-to-use APIs",
     "type": "library",
     "license": "MIT",
     "autoload": {
